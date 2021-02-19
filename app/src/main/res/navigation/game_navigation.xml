@@ -27,5 +27,20 @@
         <argument
             android:name="player_name"
             app:argType="string" />
+        <action
+            android:id="@+id/actionGameOver"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.stefsk.ResultFragment"
+        android:label="Game Over"
+        tools:layout="@layout/fragment_result">
+        <argument
+            android:name="player_score"
+            app:argType="integer" />
+        <action
+            android:id="@+id/actionRestart"
+            app:destination="@id/mainFragment" />
     </fragment>
 </navigation>
