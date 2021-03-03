@@ -17,6 +17,8 @@ class MainFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_main, container, false)
+
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -27,6 +29,12 @@ class MainFragment : Fragment() {
             val action = MainFragmentDirections.actionGameFragment(playerName)
             Navigation.findNavController(it).navigate(action)
         }
+
+        btnOption.setOnClickListener {
+            val action = MainFragmentDirections.actionOptionFragemrn()
+            Navigation.findNavController(it).navigate(action);
+        }
+
     }
 
 }
